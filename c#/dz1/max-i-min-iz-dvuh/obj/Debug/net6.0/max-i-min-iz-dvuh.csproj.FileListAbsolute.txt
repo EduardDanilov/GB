@@ -1,0 +1,15 @@
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/bin/Debug/net6.0/max-i-min-iz-dvuh
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/bin/Debug/net6.0/max-i-min-iz-dvuh.deps.json
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/bin/Debug/net6.0/max-i-min-iz-dvuh.runtimeconfig.json
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/bin/Debug/net6.0/max-i-min-iz-dvuh.dll
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/bin/Debug/net6.0/max-i-min-iz-dvuh.pdb
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.csproj.AssemblyReference.cache
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.AssemblyInfoInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.AssemblyInfo.cs
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.csproj.CoreCompileInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.dll
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/refint/max-i-min-iz-dvuh.dll
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.pdb
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/max-i-min-iz-dvuh.genruntimeconfig.cache
+/home/user/GeekBrains/GIT/c#/dz1/max-i-min-iz-dvuh/obj/Debug/net6.0/ref/max-i-min-iz-dvuh.dll

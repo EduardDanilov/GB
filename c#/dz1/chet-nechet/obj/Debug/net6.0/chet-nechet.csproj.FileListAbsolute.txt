@@ -1,0 +1,15 @@
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/bin/Debug/net6.0/chet-nechet
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/bin/Debug/net6.0/chet-nechet.deps.json
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/bin/Debug/net6.0/chet-nechet.runtimeconfig.json
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/bin/Debug/net6.0/chet-nechet.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/bin/Debug/net6.0/chet-nechet.pdb
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.csproj.AssemblyReference.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.AssemblyInfoInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.AssemblyInfo.cs
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.csproj.CoreCompileInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/refint/chet-nechet.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.pdb
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/chet-nechet.genruntimeconfig.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-nechet/obj/Debug/net6.0/ref/chet-nechet.dll

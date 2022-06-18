@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-a-do-n/chet-ot-a-do-n.csproj",
+      "projectUniqueName": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/chet-ot-a-do-n.csproj",
       "projectName": "chet-ot-a-do-n",
-      "projectPath": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-a-do-n/chet-ot-a-do-n.csproj",
+      "projectPath": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/chet-ot-a-do-n.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-a-do-n/obj/",
+      "outputPath": "/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/user/.nuget/NuGet/NuGet.Config"

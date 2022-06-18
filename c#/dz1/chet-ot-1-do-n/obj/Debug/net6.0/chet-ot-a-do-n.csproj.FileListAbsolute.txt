@@ -1,0 +1,15 @@
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.csproj.AssemblyReference.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.AssemblyInfoInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.AssemblyInfo.cs
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.csproj.CoreCompileInputs.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/bin/Debug/net6.0/chet-ot-a-do-n
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/bin/Debug/net6.0/chet-ot-a-do-n.deps.json
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/bin/Debug/net6.0/chet-ot-a-do-n.runtimeconfig.json
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/bin/Debug/net6.0/chet-ot-a-do-n.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/bin/Debug/net6.0/chet-ot-a-do-n.pdb
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/refint/chet-ot-a-do-n.dll
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.pdb
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/chet-ot-a-do-n.genruntimeconfig.cache
+/home/user/GeekBrains/GIT/c#/dz1/chet-ot-1-do-n/obj/Debug/net6.0/ref/chet-ot-a-do-n.dll
