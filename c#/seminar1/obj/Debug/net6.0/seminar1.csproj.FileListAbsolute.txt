@@ -1,0 +1,15 @@
+/home/user/GeekBrains/GIT/c#/seminar1/bin/Debug/net6.0/seminar1
+/home/user/GeekBrains/GIT/c#/seminar1/bin/Debug/net6.0/seminar1.deps.json
+/home/user/GeekBrains/GIT/c#/seminar1/bin/Debug/net6.0/seminar1.runtimeconfig.json
+/home/user/GeekBrains/GIT/c#/seminar1/bin/Debug/net6.0/seminar1.dll
+/home/user/GeekBrains/GIT/c#/seminar1/bin/Debug/net6.0/seminar1.pdb
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.csproj.AssemblyReference.cache
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.AssemblyInfoInputs.cache
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.AssemblyInfo.cs
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.csproj.CoreCompileInputs.cache
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.dll
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/refint/seminar1.dll
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.pdb
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/seminar1.genruntimeconfig.cache
+/home/user/GeekBrains/GIT/c#/seminar1/obj/Debug/net6.0/ref/seminar1.dll
