@@ -23,12 +23,12 @@ int[] createRandomArray(int size, int min, int max)
 
 void ShowArray(int[] array) 
 { 
-for (int i = 0; i < array.Length; i++) 
-{ 
-Console.Write(array[i] + " "); 
-} 
-Console.WriteLine(); 
-} 
+    for (int i = 0; i < array.Length; i++) 
+    { 
+        Console.Write(array[i] + " "); 
+    } 
+    Console.WriteLine(); 
+}
 
 int[] perevernu(int[] array)
 {
