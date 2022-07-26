@@ -1,11 +1,13 @@
-﻿void showNumbers(int n)
+﻿/*
+void showNumbers(int n)
 {
     if(n > 1) showNumbers(n - 1);
 
     Console.Write(n + " ");
 }
-
+*/
 //showNumbers(5);
+
 
 int sumOfDigits(int n)
 {
@@ -16,4 +18,4 @@ int sumOfDigits(int n)
     else return n;
 }
 
-Console.WriteLine(sumOfDigits(1234));
+Console.WriteLine(sumOfDigits(9));
