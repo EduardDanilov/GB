@@ -1,2 +1,1 @@
-hello, my first text
-green big pigtest text.txt
+red, green, blue, 
