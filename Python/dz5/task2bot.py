@@ -17,8 +17,14 @@ def frazochki():
     fraza = ['тебе повезло, ты начинаешь игру!', 'ты первый! Вперед к победе!', 'ходи первым!', 'первый ход за тобой!']
     return random.choice(fraza)
 
+def check() -> int:
+    while True:
+        a = input('input number: ')
+        if a.isdigit(): return int(a)
+
 user1 = input('Представься, игрок №1: ')
 user2 = "Бот"
+
 vsego_konfet = int(input('Введите общее количество конфет: '))
 mozhno_brat = int(input('Введите сколько конфет можно брать за 1 раз: '))
 min = 1
