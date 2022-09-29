@@ -7,12 +7,6 @@
 from random import randint
 import random
 
-# def bot_input(max):
-#     n = randint(1,mozhno_brat)
-#     while max-n <= 28 and max > 29:
-#         n = randint(1,mozhno_brat)
-#     return n
-
 def bot_input(max):
     n = randint(1, mozhno_brat)
     if max - n == min + 2:
