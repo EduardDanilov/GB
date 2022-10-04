@@ -5,6 +5,7 @@ import config
 from telebot import types, TeleBot
 import functions
 import variables
+import markups as m
 import candy_logic
 
 bot = telebot.TeleBot(config.TOKEN)
@@ -152,6 +153,11 @@ def bot_message(message):
             bot.send_message(message.chat.id, random.choice(variables.gb_words))
         elif message.text.lower() == 'пока':
             bot.send_message(message.chat.id, random.choice(variables.gb_words))
+
+
+
+
+
 
 
 print('server started')
