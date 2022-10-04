@@ -99,16 +99,23 @@ def menu(message):
     item2 = types.KeyboardButton('Орел/решка')
     item3 = types.KeyboardButton('Курсы валют')
     item4 = types.KeyboardButton('Помощь')
-    markup.add(item1, item2, item3, item4)
+    test_button = types.KeyboardButton('TECT')
+    markup.add(item1, item2, item3, item4, test_button)
     bot.send_message(message.chat.id, 'Добро пожаловать в меню, {0.first_name}!'.format(message.from_user), reply_markup = markup)
     
 
 @bot.message_handler(content_types=['text'])
+
 def bot_message(message):
     if message.chat.type == 'private':
+        # if message.text == 'TECT':
+        #     keyboard = types.InlineKeyboardMarkup()
+        #     test_button = types.InlineKeyboardButton(url="https://stackoverflow.com", text="Go to StackOverflow")
+        #     keyboard.add(test_button)
+        #     bot.send_message(message.chat.id, "Button 1 handler", reply_markup=keyboard)
         if message.text == 'Игра в конфеты':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton('Играть')
+            item1 = types.KeyboardButton(text = 'Играть')
             item2 = types.KeyboardButton('Описание игры')
             back_button = types.KeyboardButton('Назад')
             markup.add(item1, item2, back_button)
@@ -124,11 +131,12 @@ def bot_message(message):
             bot.send_message(message.chat.id, '/help')
         elif message.text == 'Курсы валют':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+            item4 = types.KeyboardButton(text = 'Лучшие курсы')
             item1 = types.KeyboardButton('Доллар США')
             item2 = types.KeyboardButton('Евро')
             item3 = types.KeyboardButton('Российский рубль')
             back_button = types.KeyboardButton('Назад')
-            markup.add(item1, item2, item3, back_button)
+            markup.add(item1, item2, item3, item4, back_button)
             bot.send_message(message.chat.id, 'Курсы валют', reply_markup = markup)
         elif message.text == 'Назад':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -138,6 +146,11 @@ def bot_message(message):
             item4 = types.KeyboardButton('Помощь')
             markup.add(item1, item2, item3, item4)
             bot.send_message(message.chat.id, 'Главное меню', reply_markup = markup)
+        elif message.text == 'Лучшие курсы':
+            keyboard = types.InlineKeyboardMarkup()
+            test_button = types.InlineKeyboardButton(url="https://myfin.by/currency/minsk", text="Лучшие курсы валют")
+            keyboard.add(test_button)
+            bot.send_message(message.chat.id, "Переходи по ссылке:", reply_markup=keyboard)
         
         elif message.text.lower() == 'hi':
             bot.send_message(message.chat.id, random.choice(variables.hi_words))
