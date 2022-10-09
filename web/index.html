@@ -3,24 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя первая страница</title>
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Данилов Эдуард Эдуардович</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>
-        Всем привет!
-    </h1>
-    <h2>
-        Немного обо мне
-    </h2>
-    <p>
-        Здесь я буду рассказывать о своих <i>достижениях</i> в области <strong>HTML</strong> и <strong>CSS</strong>
-    </p>
-    <p>    
-        Сложно ли учить <strong>HTML</strong>? Возможно. Но если приложить некоторые усилия, то <b><i>ничего сложного нет</i></b>
-    </p>
-    Спросите у <a href="https://yandex.ru">yandex</a>
-    
+    <div class="container">
+        <div class="top_line">Резюме</div>
+        <nav class="main_menu">
+            <ul class="main_navigation">
+                <li><a href="#about_me" class="a_tag">Главная</a></li>
+                <li><a href="#about_me">Обо мне</a></li>
+                <li><a href="#career">Карьера</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="main_photo">
+            <img src="images/photo1.png" alt="Gallery image 1" width="250px"><br>
+            Данилов<br> Эдуард Эдуардович
+        </div>
+        <div class="item center_block1">IT-индустрия привлекает меня постоянным развитием, внедрением инноваций и большими возможностями для самообразования. В данный момент есть несколько интересных для меня направлений.
+            <p>DevOps. Эта культура объединяет и разработку, и тестирование, и ряд других направлений в сфере IT. Мне нравится организовывать процессы, меня привлекают те методы и технологии, с которыми работают DevOps инженеры.</p>
+            <p>Программирование. Множество задач, постоянный профессиональный рост, востребованность, охват смежных областей, практикаориентированность - разве этого недостаточно, чтобы стать программистом? Путь к успеху, безусловно, трудный, но всё возможно, было бы только желание. А оно есть. Что же касается самих <a href="https://ru.wikipedia.org/wiki/Список_языков_программирования_по_категориям"  target="_blank">языков программирования</a>, то из всей массы я выбрал Python и Javascript.</p>
+            <p>Веб-разработка. Очень интересное направление в программировании, которое в настоящее время преобладает в списке моих приоритетов. Результат работы виден сразу, что немаловажно! В конце концов, тут всегда хватает работы как для любителей писать код, так и для дизайнеров. </p>
+        </div>
+        <div class="item item_block1">Сюда легко поместится небольшая цитата о чем-нибудь интересном</div>
+        <div class="item item_block2">Какой-то рекламный текст</div>
+        <div class="text_block">
+            <h3><a name="about_me">Немного о себе</a></h3>
+            Я активный и целеустремлённый, освоить новое в моей жизни направление и развиваться в нем - не проблема. 
+            Всегда я работал в больших коллективах, поэтому коммуникабельность - то, что помогало мне найти общий язык с окружающими людьми и отлично справляться с командной работой. Начатое всегда довожу до конца. Сталкиваясь с трудностями, не убегаю от них. 
+        </div>
+        <div class="text_block">
+            <h3><a name ="education">Образование</a></h3>
+            2022 год: Академия "BELHARD", специальность "DevOps. System engineer."<br>
+            В настоящее время: GeekBrains, специальность "Разработчик" 
+        </div>
+        <div class="text_block">
+            <h3><a name ="career">Карьера</a></h3>
+            2022 год: Академия "BELHARD", практика "DevOps. System engineer.":<br>
+            <ul>
+                <li>Linux: работал в основном с Ubuntu, знаком с Debian;
+                <li>знаю и понимаю устройство сетей, адресацию, модель OSI; 
+                <li>Microsoft Windows Server: создание и конфигурирование DNS и DHCP серверов;
+                <li>Git: знаком и работал с системой контроля версий; 
+                <li>Docker: опыт написания dockerfile, в том числе для создания кастомного образа, загрузка в репозиторий и использование образов, опыт в написании docker-compose;
+                <li>Web-server: работал с Nginx: установка и конфигурирование;
+                <li>Databases: знаком с PostgreSQL, MySQL;
+                <li>Виртуализация: опыт работы с VirtualBox;
+                <li>Terraform: создание работающей инфраструктуры в виртуальной среде VirtualBox;
+                <li>Ansible: опыт в написании плейбуков для конфигурации инфраструктуры, состоящей, в том числе, из нескольких серверов;
+                <li>Jenkins: установка, конфигурация, опыт в написании джоб и пайплайнов;
+                <li>опыт в построении работающего CI/CD цикла с использованием стека LAMP
+            </ul>
+        </div>
+    </div>
 </body>
+<footer>
+    <div class="footer_left">
+        © Данилов Эдуард Эдуардович<br>
+        2022
+    </div>
+    <div class="footer_right">
+        <a href="https://www.linkedin.com/in/eddanilov/" target="_blank"><img src="images/logo-linkedin.png" width="30px"></a>
+        <a href="https://t.me/eddanilov" target="_blank"><img src="images/Telegram-logo.png" width="50px"></a>
+        <a href="mailto:ed.danilov94@gmail.com" target="_blank"><img src="images/Gmail_Logo.png" width="40px"></a>
+    </div>  
+</footer>
 </html>
