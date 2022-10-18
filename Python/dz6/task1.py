@@ -3,7 +3,7 @@
 list = [1, 2, 3, 4, 5, 6, 7]
 
 def func_for_find (numbers: list) -> bool:
-    N = int(input('input number to find in list: '))
+    N = int(input('Введите число: '))
 
     return True if N in list else False
 
