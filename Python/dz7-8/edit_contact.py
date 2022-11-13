@@ -21,7 +21,7 @@ def addContactWindow():
 
 
     window = Tk()
-    window.title("Сохранение нового контакта")
+    window.title("Сохранение нового пользователя")
     window.geometry('400x150')
     
     name = Entry(window, width=20)
