@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Контакты</title>
+</head>
+
+<body>
+    <h1 class="top_heading">Магазин техники</h1>
+    <ul class="menu_box">
+        <li class="menu_li"><a class="menu_link" href="index.html">Главная</a></li>
+        <li class="menu_li"><a class="menu_link" href="catalog.html">Каталог</a></li>
+        <li class="menu_li"><a class="menu_link" href="contacts.html">Контакты</a></li>
+    </ul>
+    <hr>
+    <h2>Форма обратной связи</h2>
+    <form action="#">
+
+        Ваше имя: <input class="input_text" type="text" placeholder="Ваше имя"><br>
+        Ваша фамилия: <input class="input_text" type="text" placeholder="Ваша фамилия"><br>
+        Ваш пол: <br>
+        <label for="male">М</label> <input type="radio" name="sex" id="male" checked>
+        <label for="female">Ж</label> <input type="radio" name="sex" id="female"><br>
+        Ваши увлечения: <br>
+        <label for="sport">Спорт</label> <input type="checkbox" id="sport" checked><br>
+        <label for="music">Музыка</label> <input type="checkbox" id="music" checked><br>
+        <label for="draw">Рисование</label> <input type="checkbox" id="draw"><br>
+        Расскажите о себе: <br>
+        <textarea cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Отправить данные">
+        <input type="reset" value="Очистить форму">
+    </form>
+
+    <h2>Контакты</h2>
+    <h3 class="heading_mini">Наш адрес:</h3>
+    <p>Город Таганрог, улица Дзержинского, 165, ТЦ Юность.</p>
+    <div>
+        <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0528cf1015a88f550b052a13a6e3c441b7b5655c3b18f78836f94160305a0ca4&amp;width=600&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+    </div>
+
+    <hr>
+    <p>Все права защищены &copy; 2022.</p>
+</body>
+
+</html>
