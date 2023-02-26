@@ -13,7 +13,7 @@ number AS Номер_потока,
 student_count AS Количество_студентов
 FROM streams WHERE student_count >= 40;
 
---Найдите два потока с самыми низкими значениями успеваемости. В отчет выведите номер потока, название курса, фамилию и имя преподавателя (одним столбцом), оценку успеваемости
+-- Найдите два потока с самыми низкими значениями успеваемости. В отчет выведите номер потока, название курса, фамилию и имя преподавателя (одним столбцом), оценку успеваемости
 SELECT
 (SELECT number from streams WHERE id = stream_id) AS Номер_потока,
 (SELECT (SELECT name FROM courses WHERE id = course_id) FROM streams WHERE id = stream_id) AS Название_курса,
@@ -24,7 +24,7 @@ FROM grades
 ORDER BY grade ASC LIMIT 2;
 
 
---Найдите потоки преподавателя Натальи Петровой
+-- Найдите потоки преподавателя Натальи Петровой
 SELECT
 (SELECT number FROM streams WHERE id = stream_id) AS Номер_потока,
 stream_id AS ID_потока FROM grades WHERE teacher_id = (SELECT id FROM teacher WHERE surname = 'Савельев' AND name = 'Николай');
