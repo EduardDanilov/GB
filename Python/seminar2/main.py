@@ -1,3 +1,4 @@
+# Вывести индексы максимальных и минимальных элементов массива
 numbers = [5, 2, 8, 3, 9]
 a = numbers.index(max(numbers))
 b = numbers.index(min(numbers))
