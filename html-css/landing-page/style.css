@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    margin-top: 40px;
+    margin-bottom: 83px;
+}
+
+.growbe {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.growbe_link {
+    background: linear-gradient(to right,#000000 68%, #F25822 32%);
+}
+
+.growbe_text {
+    color: #111;
+    background: #fff;
+    mix-blend-mode: lighten;
+}
+
+.menu {
+    margin-top: 11px;
+    margin-bottom: 12px;
+}
+
+.top_content {
+    padding-bottom: 162px;
+}
+
+.heading {
+    margin-bottom: 17px;
+}
+
+.text {
+    margin-bottom: 37px;
+}
+
+.logos {
+    padding-top: 97px;
+    padding-bottom: 96px;
+}
