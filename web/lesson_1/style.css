@@ -19,7 +19,6 @@
   font-style: italic;
   line-height: 16px;
 }
-
 .text_more {
   color: #484343;
   font-size: 16px;
@@ -27,12 +26,10 @@
   line-height: 24px;
   text-align: left;
 }
-
 .text_li {
   color: #707070;
   font-size: 14px;
 }
-
 .text_li::before {
   content: url(img/arrow.png);
 }
@@ -49,7 +46,6 @@
   font-size: 14px;
   line-height: 1.5;
 }
-
 .menu_link:hover {
   color: #363636;
 }
@@ -63,5 +59,4 @@
 .img_product {
   background-color: grey;
   padding: 2px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
