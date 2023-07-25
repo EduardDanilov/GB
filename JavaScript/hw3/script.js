@@ -60,7 +60,8 @@ function simpleCalc() {
     let result;
 
     let userChoiceOperation = prompt('Введите название операции или ее код (указан в скобке):\nСложение (1)\nВычитание (2)\nУмножение (3)\nДеление (4)').toLowerCase();
-    
+
+
     if (userChoiceOperation === 'сложение' || Number(userChoiceOperation) === 1) {
         result = sum(number1, number2);
     } else if (userChoiceOperation === 'вычитание' || Number(userChoiceOperation) === 2) {
