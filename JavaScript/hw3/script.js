@@ -75,4 +75,4 @@
 //     console.log(result);
 // }
 
-simpleCalc()
+// simpleCalc()
