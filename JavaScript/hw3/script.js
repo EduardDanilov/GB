@@ -47,32 +47,32 @@
 // 4. Деление
 // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 
-function simpleCalc() {
+// function simpleCalc() {
 
-    let sum = (a, b) => a+b;
-    let minus = (a, b) => ((a >= b) ? a-b : b-a);
-    let mult = (a, b) => a*b;
-    let divide = (a, b) => a/b;
-
-
-    let number1 = Number(prompt('Введите число №1'));
-    let number2 = Number(prompt('Введите число №2'));
-    let result;
-
-    let userChoiceOperation = prompt('Введите название операции или ее код (указан в скобке):\nСложение (1)\nВычитание (2)\nУмножение (3)\nДеление (4)').toLowerCase();
+//     let sum = (a, b) => a+b;
+//     let minus = (a, b) => ((a >= b) ? a-b : b-a);
+//     let mult = (a, b) => a*b;
+//     let divide = (a, b) => a/b;
 
 
-    if (userChoiceOperation === 'сложение' || Number(userChoiceOperation) === 1) {
-        result = sum(number1, number2);
-    } else if (userChoiceOperation === 'вычитание' || Number(userChoiceOperation) === 2) {
-        result = minus(number1, number2)
-    } else if (userChoiceOperation === 'умножение' || Number(userChoiceOperation) === 3) {
-        result = mult(number1, number2)
-    } else if (userChoiceOperation === 'деление' || Number(userChoiceOperation) === 4) {
-        result = divide(number1, number2)
-    }
+//     let number1 = Number(prompt('Введите число №1'));
+//     let number2 = Number(prompt('Введите число №2'));
+//     let result;
 
-    console.log(result);
-}
+//     let userChoiceOperation = prompt('Введите название операции или ее код (указан в скобке):\nСложение (1)\nВычитание (2)\nУмножение (3)\nДеление (4)').toLowerCase();
+
+
+//     if (userChoiceOperation === 'сложение' || Number(userChoiceOperation) === 1) {
+//         result = sum(number1, number2);
+//     } else if (userChoiceOperation === 'вычитание' || Number(userChoiceOperation) === 2) {
+//         result = minus(number1, number2)
+//     } else if (userChoiceOperation === 'умножение' || Number(userChoiceOperation) === 3) {
+//         result = mult(number1, number2)
+//     } else if (userChoiceOperation === 'деление' || Number(userChoiceOperation) === 4) {
+//         result = divide(number1, number2)
+//     }
+
+//     console.log(result);
+// }
 
 simpleCalc()
