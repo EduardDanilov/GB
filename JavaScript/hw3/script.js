@@ -11,14 +11,17 @@
 // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
 // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
 
+// Вариант 1
 // function calculateNetSalary(userSalary) {
-//     if (isNaN(userSalary)) {
-//         console.log('Invalid value');
-//     } else {
-//         return `Размер заработной платы за вычетом налогов равен ${userSalary - (userSalary / 100 * 13)}`;
-//     }
+//     (isNaN(userSalary)) ? 
+//     console.log('Invalid value') : 
+//     console.log(`Размер заработной платы за вычетом налогов равен ${userSalary - (userSalary / 100 * 13)}`);
 // }
-// console.log(calculateNetSalary(prompt('Введите размер заработной платы')));
+
+//Вариант 2
+// let calculateNetSalary = (userSalary) => (isNaN(userSalary) ? console.log('Incorrect value') : console.log(`Размер заработной платы за вычетом налогов равен ${userSalary - (userSalary / 100 * 13)}`));
+
+// calculateNetSalary(prompt('Введите размер заработной платы'));
 
 
 // Задание 3

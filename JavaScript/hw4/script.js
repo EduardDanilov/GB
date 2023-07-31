@@ -38,7 +38,7 @@
 
 // const getRandomArbitrary = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-// for (let i = 1; i < 6; i++) {
+// for (let i = 1; i <= 5 ; i++) {
 //     arr.push(getRandomArbitrary(0, 9));
 // }
 
