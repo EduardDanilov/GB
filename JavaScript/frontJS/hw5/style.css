@@ -44,14 +44,9 @@ a {
 .product__img {
   max-width: 100%;
 }
-.product__img:hover {
+.product__img-hover {
   scale: 1.2;
   transition: 1.2s;
-}
-.product__img-hover {
-  position: absolute;
-  z-index: 1;
-  max-width: 400px;
 }
 .product__name {
   font-size: 20px;

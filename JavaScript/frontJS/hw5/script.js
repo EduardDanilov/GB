@@ -33,4 +33,11 @@ catalogItems.forEach(({id, name, description, price, image, alt, link}) => {
     productBox.appendChild(productId);
     productId.classList.add('product__id');
     productId.textContent = `Код при заказе: ${id}`;
+
+    productImage.addEventListener('mouseenter', () => {
+        productImage.classList.add('product__img-hover')
+    });
+    productImage.addEventListener('mouseleave', () => {
+        productImage.classList.remove('product__img-hover')
+    })
 });
