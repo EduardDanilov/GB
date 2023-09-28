@@ -95,6 +95,7 @@ async function fetchData() {
                 cartBox.insertAdjacentHTML('beforeend', cartItem);
 
 
+                //Удаление элементов из корзины
                 const removeButtons = document.querySelectorAll('.close__btn');
                 removeButtons.forEach((el) => {
                     el.addEventListener('click', () => {
@@ -105,19 +106,10 @@ async function fetchData() {
             })
         })
 
-
-
-
-
-
-
     } catch (error) {
         console.error(error);
     }
 }
-
-
-
 
 fetchData();
 
