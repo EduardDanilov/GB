@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.info-block {
+    display: none;
+}
+
+.product__cards {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.product__cards__title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.product_cards_heading {
+    color: #222;
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 6px;
+}
+
+.product_cards_text {
+    color: #9F9F9F;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cards_content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product__cards__card {
+    background-color: #F8F8F8;
+    width: 360px;
+}
+
+.card_img-block {
+    position: relative;
+}
+
+.card_img {
+    max-width: 100%;
+}
+
+.card_text-block {
+    display: flex;
+    max-width: 360px;
+    padding: 24px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.card_title {
+    color: #000;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card_description {
+    color: #5D5D5D;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    max-width: 315px;
+}
+
+.card_price {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price_value {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.browse_all_products_button {
+    color: #F26376;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: max-content;
+    border: 1px solid #FF6A6A;
+    padding: 15px 39px;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
+.card_img_blackout {
+    background-color: rgba(58, 56, 56, 0.86);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 99%;
+    visibility: hidden;
+}
+
+.add_to_cart_button {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    max-width: max-content;
+    margin: 50% auto;
+    cursor: pointer;
+}
+
+.add_to_cart_button-img {
+    margin-left: 13px;
+    margin-top: 11px;
+    margin-bottom: 8px;
+}
+
+.add_to_cart_button-content {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 11px;
+    margin-right: 16px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.cart__heading {
+    padding-bottom: 30px;
+}
+
+.cart__box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cart_item {
+    display: flex;
+    max-width: 652px;
+    max-height: 306px;
+    position: relative;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+
+.cart_item-img-box {
+    width: 40%;
+}
+
+.cart_item-img {
+    width: 100%;
+}
+
+.cart_item_description {
+    margin-left: 31px;
+}
+
+.cart_item-description-heading {
+    margin-top: 22px;
+    margin-bottom: 42px;
+    max-width: 262px;
+
+    color: #222;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cart_item_description-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    color: #575757;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-currency, .price-value {
+    color: #EF5B70;
+}
+
+.close__btn {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    top: 28px;
+    border: 0;
+    background: 0;
+}
+
+.cart_item_quantity {
+    display: flex;
+}
+
+.item_quantity_value_input-area {
+    margin-left: 24px;
+    width: 44px;
+    height: 25px;
+}
