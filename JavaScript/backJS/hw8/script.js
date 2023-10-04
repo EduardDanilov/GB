@@ -62,13 +62,19 @@ class Order {
     }
 
     addProduct(productName, productPrice) {
-        const product = {
-            productName: '',
-            productPrice: 0
-        }
-        product.productName = productName;
-        product.productPrice = productPrice;
-        this.products.push(product);
+        if (productName !== '' && typeof productName === 'string' && productPrice > 0) {
+            const product = {
+                productName: '',
+                productPrice: 0
+            }
+            product.productName = productName;
+            product.productPrice = productPrice;
+            this.products.push(product);
+        } else if (productName === '' || typeof productName !== 'string') {
+            return 'ERROR. Incorrect productName value entered';
+        } else if (productPrice <= 0){
+            return 'ERROR. Еhe product price must be greater than 0';
+        } else {return 'Error...'}
     }
 
     getTotalPrice() {
@@ -89,8 +95,8 @@ userOrder.addProduct('пельмени', 1000)
 userOrder.addProduct('стейк', 500)
 userOrder.addProduct('колбаса', 200)
 userOrder.addProduct('сахар', 800)
-userOrder.addProduct('кофе', 700)
+userOrder.addProduct('чай') // не будет добавлен, так как не указана цена
 
 console.log(userOrder.orderNumber); //12345
-console.log(userOrder.products); // массив объектов, количество элементов 6
-userOrder.getTotalPrice(); //3300
+console.log(userOrder.products); // массив объектов, количество элементов 5
+userOrder.getTotalPrice(); //2600
