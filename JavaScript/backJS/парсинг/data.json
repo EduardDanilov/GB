@@ -1,0 +1,16 @@
+{
+    "name": "Edward",
+    "surname": "Surname",
+    "age": 20,
+    "classes": {
+        "mathematics": {
+            "hours": 50,
+            "mark": "ok"
+        },
+        "physics": {
+            "hours": 100,
+            "mark": "ok"
+        }
+    },
+    "school": "school №2"
+}
