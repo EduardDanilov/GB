@@ -17,7 +17,7 @@ const studentInfo = {
 }
 
 // Преобразование объекта в JSON формат
-const setStudentInfoInJsonFile = JSON.stringify(studentInfo, null, 4);
+const setObjectToJson = JSON.stringify(studentInfo, null, 4);
 
 
 // Получение данных из локального файла JSON.
@@ -27,6 +27,7 @@ import jsonFile from './data.json' assert {type: 'json'};
 
 
 // Получение данных с API
+// В HTML нужно указать модульный тип скрипта <script type="module" src="script.js"></script>
 const apiUrl = 'https://api.github.com/users/octocat'; // Пример ссылки на API
 
 const getDataFromApi = async (url) => {
@@ -43,9 +44,12 @@ const getDataFromApi = async (url) => {
 const apiData = await getDataFromApi(apiUrl);
 
 
-// Отправка формы на сервер
 
-const serverUrl = 'https://httpbin.org/2post'; // Пример ссылки на сервер
+// Отправка данных на сервер
+
+// Вариант №1. Функция принимает форму и отправляет данные на сервер
+
+const serverUrl = 'https://httpbin.org/post'; // Пример ссылки на сервер
 
 function sendFormData() {
     const XHR = new XMLHttpRequest();
@@ -83,3 +87,38 @@ form.addEventListener("submit", function (event) {
 
     sendFormData();
 });
+
+
+// Вариант №2. Функция принимает объект, преобразует его в JSON и отправляет на сервер
+// Пример объекта
+const user = {
+    name: 'John Smith',
+    age: 30,
+    email: 'john@example.com'
+};
+
+// Функция отправки данных на сервер
+const saveUserData = (userObject) => {
+    const serverUrl = 'https://httpbin.org/post'; // Пример ссылки на сервер
+
+    let data = new FormData();
+    data.append('json', JSON.stringify(userObject)); // Преобразование из объекта в JSON, заполнение data
+
+    fetch(serverUrl, {
+        method: 'POST', // метод
+        body: data // тело с данными
+    }).then((response) => { // обработка ответа сервера
+        if(!response.ok) {
+            return Promise.reject(new Error(`Response failed: ${response.status} (${response.statusText})`))
+        }
+        console.log('User data saved successfully'); // В случае положительного ответа сервера
+        return response.json()
+    }).then((data) => { // работа с данными, полученными от сервера
+        const userinfojson = JSON.parse(data.form.json);
+        console.log('User data: ',userinfojson);
+    }).catch((error) => { // вывод ошибки
+        console.log(error);
+    });
+}
+
+saveUserData(user)
