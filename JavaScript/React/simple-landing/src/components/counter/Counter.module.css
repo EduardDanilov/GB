@@ -1,0 +1,28 @@
+.divCounter {
+    margin-bottom: 40px;
+}
+
+.counter {
+    font-size: 40px;
+}
+
+.btnInc {
+    background-color: rgb(33, 220, 0);
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnDec {
+    background-color: red;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    gap: 30px;
+}

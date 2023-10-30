@@ -1,0 +1,14 @@
+.btn {
+    width: 150px;
+    height: 30px;
+    border: 1px solid rgb(0, 193, 19);
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: rgb(184, 183, 183);
+}

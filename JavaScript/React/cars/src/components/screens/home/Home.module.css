@@ -1,0 +1,21 @@
+.item {
+    border: 1px solid #fff;
+    width: 350px;
+    margin-bottom: 40px;
+}
+
+.backImage {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.info {
+    padding: 10px;
+    background-color: black;
+}
+
+.info h2, p {
+    margin-bottom: 10px;
+}
