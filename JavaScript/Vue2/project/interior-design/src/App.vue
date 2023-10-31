@@ -3,15 +3,15 @@
     <GlobalStyles />
     <SiteHeader />
     <InteriorPage />
-    <!-- <InteriorPageBanner /> -->
+    <SiteFooter />
   </div>
 </template>
 
 <script>
 import SiteHeader from "./components/global/SiteHeader/SiteHeader.vue";
 import GlobalStyles from "./components/global/GlobalStyles.vue";
-// import InteriorPageBanner from "./components/InteriorPage/InteriorPageBanner.vue";
 import InteriorPage from "@/components/InteriorPage/InteriorPage.vue";
+import SiteFooter from "./components/global/SiteFooter/SiteFooter.vue";
 
 export default {
   name: "App",
@@ -19,7 +19,7 @@ export default {
     SiteHeader,
     GlobalStyles,
     InteriorPage,
-    // InteriorPageBanner,
+    SiteFooter,
   },
 };
 </script>
