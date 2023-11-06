@@ -1,8 +1,10 @@
 <template>
     <div class="prodlist">
         <div class="name">{{ product.name }}</div>
-        <div class="price">{{ product.price }}</div>
-        <div class="isavailable">{{ product.isAvailable ? 'Available' : 'Out of stock' }}</div>
+        <div class="price">{{ formattedPrice }}</div>
+        <div class="isavailable">
+            {{ product.isAvailable ? "Available" : "Out of stock" }}
+        </div>
     </div>
 </template>
 <script>
@@ -10,20 +12,21 @@ export default {
   name: 'ProductList',
   props: {
     product: {
-      type: Object,
+    //   type: Object,
+    //   required: true
     }
   },
-  methods: {
-    sortUp () {
-      this.productList = this.productList.sort((a, b) =>
-        a.price > b.price ? 1 : -1)
-    },
-    sortDown () {
-      this.productList = this.productList.sort((a, b) =>
-        a.price < b.price ? 1 : -1)
+  computed: {
+    formattedPrice() {
+      const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      });
+
+      return formatter.format(this.product.price);
     }
   }
-}
+  }
 </script>
 <style>
 .prodlist {
