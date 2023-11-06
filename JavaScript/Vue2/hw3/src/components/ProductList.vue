@@ -11,10 +11,7 @@
 export default {
   name: 'ProductList',
   props: {
-    product: {
-    //   type: Object,
-    //   required: true
-    }
+    product: {}
   },
   computed: {
     formattedPrice() {
