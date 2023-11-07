@@ -1,21 +1,62 @@
 <template>
-  <div>
-    <!-- <h3 class="tags-heading">Tags</h3> -->
-    <div class="tag">{{ tag.name }}</div>
+  <div class="tags-container">
+    <div
+      class="tag"
+      v-for="(tag, index) in tags"
+      :key="index"
+      @click="handleClick(index)"
+    >
+      {{ tag.name }}
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: "InteriorPageTags",
-  props: {
-    tag: {
-      type: String,
-      required: true,
+  data() {
+    return {
+      articleCode: 0,
+      tags: [
+        {
+          id: 0,
+          name: "Kitchen",
+        },
+        {
+          id: 1,
+          name: "Bedroom",
+        },
+        {
+          id: 2,
+          name: "Building",
+        },
+        {
+          id: 3,
+          name: "Architecture",
+        },
+        {
+          id: 4,
+          name: "Kitchen Planning",
+        },
+      ],
+    };
+  },
+  methods: {
+    getTagId(tag) {
+      console.log(tag.id);
+      this.articleCode = tag.id;
+    },
+    handleClick(index) {
+      this.$emit("clickedTag", index);
     },
   },
 };
 </script>
 <style scoped>
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .tag {
   color: #292f36;
   text-align: center;
