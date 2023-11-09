@@ -19,7 +19,7 @@ import InteriorPageArticle from "./InteriorPageArticle.vue";
 import InteriorPageArticle2 from "./InteriorPageArticle2.vue";
 import InteriorPageArticle3 from "./InteriorPageArticle3.vue";
 import InteriorPageArticle4 from "./InteriorPageArticle4.vue";
-import NoPage from "./NoPage.vue";
+import NoPage from "../global/NoPage.vue";
 import InteriorPageBanner from "./InteriorPageBanner.vue";
 import InteriorPageTags from "./InteriorPageTags.vue";
 export default {
@@ -40,9 +40,6 @@ export default {
     this.setArticleComponent(this.articleCode);
   },
   methods: {
-    clg() {
-      console.log(this.nechto);
-    },
     setArticleComponent(index) {
       this.articleCode = index;
       switch (index) {

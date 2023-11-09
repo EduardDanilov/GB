@@ -1,13 +1,49 @@
 <template>
   <ul>
-    <li><a href="#" class="li-element">Home</a></li>
-    <li><a href="#" class="li-element">Project</a></li>
-    <li><a href="#" class="li-element">Blog</a></li>
+    <li
+      class="li-element"
+      v-for="(navElement, index) in navElements"
+      :key="index"
+      @click="selectVisibleComponent(navElement)"
+    >
+      {{ navElement.name }}
+    </li>
   </ul>
 </template>
 <script>
+import { mapMutations } from "vuex";
+import { mapState } from "vuex";
+
 export default {
   name: "NavList",
+  data() {
+    return {
+      navElements: [
+        {
+          id: 0,
+          name: "Home",
+        },
+        {
+          id: 1,
+          name: "Project",
+        },
+        {
+          id: 2,
+          name: "Blog",
+        },
+      ],
+    };
+  },
+  methods: {
+    selectVisibleComponent(navElement) {
+      console.log(navElement.id);
+      this.setVisibleComponent(navElement.id);
+    },
+    ...mapMutations(["setVisibleComponent"]),
+  },
+  computed: {
+    ...mapState(["visibleComponent"]),
+  },
 };
 </script>
 <style>
