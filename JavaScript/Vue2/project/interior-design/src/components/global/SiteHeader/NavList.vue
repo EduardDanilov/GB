@@ -36,8 +36,7 @@ export default {
   },
   methods: {
     selectVisibleComponent(navElement) {
-      console.log(navElement.id);
-      this.setVisibleComponent(navElement.id);
+      this.setVisibleComponent(navElement.name);
     },
     ...mapMutations(["setVisibleComponent"]),
   },

@@ -3,7 +3,7 @@
     <GlobalStyles />
     <SiteHeader />
     <div :is="currentComponent"></div>
-    <div>{{ a }}</div>
+    <div>{{ currentPage }}</div>
     <SiteFooter />
   </div>
 </template>
@@ -11,6 +11,7 @@
 <script>
 import { mapMutations } from "vuex";
 import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 import SiteHeader from "./components/global/SiteHeader/SiteHeader.vue";
 import GlobalStyles from "./components/global/GlobalStyles.vue";
 import InteriorPage from "@/components/InteriorPage/InteriorPage.vue";
@@ -31,22 +32,24 @@ export default {
   data() {
     return {
       currentComponent: null,
-      a: 0,
+      homePage: "Project",
+      // currentPage: "Home",
+      currentPage: this.$store.getters.getVisibleComponent,
     };
   },
   created() {
-    this.currentComponent = InteriorPage;
+    // this.currentComponent = InteriorPage;
     this.currentComponentChanger();
+    this.setVisibleComponent(this.homePage);
   },
   methods: {
     ...mapMutations(["setVisibleComponent"]),
-    currentComponentChanger(a) {
-      switch (a) {
-        case 0:
-          console.log("zero");
+    currentComponentChanger() {
+      switch (this.currentPage) {
+        case "Home":
           this.currentComponent = InteriorPage;
           break;
-        case 1:
+        case "Project":
           this.currentComponent = ProjectPage;
           break;
         default:
@@ -55,13 +58,10 @@ export default {
       }
     },
   },
+
   computed: {
     ...mapState(["visibleComponent"]),
-    count() {
-      return {
-        a: this.$store.state.visibleComponent,
-      };
-    },
+    ...mapGetters(["getVisibleComponent"]),
   },
 };
 </script>

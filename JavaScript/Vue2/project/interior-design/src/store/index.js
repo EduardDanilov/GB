@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     //Начальное состояние
-    visibleComponent: "",
+    visibleComponent: null,
   },
   mutations: {
     //Методы изменения состояния
@@ -19,6 +19,7 @@ export default new Vuex.Store({
   },
   getters: {
     //Методы чтения состояния
+    getVisibleComponent: (state) => state.visibleComponent,
   },
   modules: {
     //Модули VueX для разделения хранилища на подхранилища
