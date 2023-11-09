@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     //Начальное состояние
-    visibleComponent: null,
+    visibleComponent: "",
   },
   mutations: {
     //Методы изменения состояния

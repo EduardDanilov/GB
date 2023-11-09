@@ -1,10 +1,17 @@
 <template>
   <div id="app">
-    <GlobalStyles />
-    <SiteHeader />
-    <div :is="currentComponent"></div>
-    <div>{{ currentPage }}</div>
-    <SiteFooter />
+    <div class="app-wrapper">
+      <GlobalStyles />
+      <SiteHeader />
+      <div :is="currentComponent"></div>
+      <div v-if="this.$store.getters.getVisibleComponent === 'Home'">
+        <InteriorPage />
+      </div>
+      <div v-if="this.$store.getters.getVisibleComponent === 'Project'">
+        <ProjectPage />
+      </div>
+      <SiteFooter />
+    </div>
   </div>
 </template>
 
@@ -34,28 +41,30 @@ export default {
       currentComponent: null,
       homePage: "Project",
       // currentPage: "Home",
-      currentPage: this.$store.getters.getVisibleComponent,
+      // currentPage: this.$store.getters.getVisibleComponent,
+      currentPage: function () {
+        return this.$store.getters.getVisibleComponent;
+      },
     };
   },
   created() {
-    // this.currentComponent = InteriorPage;
     this.currentComponentChanger();
     this.setVisibleComponent(this.homePage);
   },
   methods: {
     ...mapMutations(["setVisibleComponent"]),
     currentComponentChanger() {
-      switch (this.currentPage) {
-        case "Home":
-          this.currentComponent = InteriorPage;
-          break;
-        case "Project":
-          this.currentComponent = ProjectPage;
-          break;
-        default:
-          this.currentComponent = NoPage;
-          break;
-      }
+      // switch (this.currentPage) {
+      //   case "Home":
+      //     this.currentComponent = InteriorPage;
+      //     break;
+      //   case "Project":
+      //     this.currentComponent = ProjectPage;
+      //     break;
+      //   default:
+      //     this.currentComponent = NoPage;
+      //     break;
+      // }
     },
   },
 
@@ -66,4 +75,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.app-wrapper {
+  width: 100%;
+  align-items: center;
+}
+</style>
