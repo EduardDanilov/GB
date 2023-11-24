@@ -54,17 +54,17 @@ export default {
   methods: {
     ...mapMutations(["setVisibleComponent"]),
     currentComponentChanger() {
-      // switch (this.currentPage) {
-      //   case "Home":
-      //     this.currentComponent = InteriorPage;
-      //     break;
-      //   case "Project":
-      //     this.currentComponent = ProjectPage;
-      //     break;
-      //   default:
-      //     this.currentComponent = NoPage;
-      //     break;
-      // }
+      switch (this.currentPage) {
+        case "Home":
+          this.currentComponent = 'InteriorPage';
+          break;
+        case "Project":
+          this.currentComponent = 'ProjectPage';
+          break;
+        default:
+          this.currentComponent = 'NoPage';
+          break;
+      }
     },
   },
 
