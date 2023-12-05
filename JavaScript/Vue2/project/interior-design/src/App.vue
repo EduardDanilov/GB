@@ -56,13 +56,13 @@ export default {
     currentComponentChanger() {
       switch (this.currentPage) {
         case "Home":
-          this.currentComponent = 'InteriorPage';
+          this.currentComponent = "InteriorPage";
           break;
         case "Project":
-          this.currentComponent = 'ProjectPage';
+          this.currentComponent = "ProjectPage";
           break;
         default:
-          this.currentComponent = 'NoPage';
+          this.currentComponent = "NoPage";
           break;
       }
     },

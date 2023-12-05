@@ -4,8 +4,8 @@ async function fetchData() {
         if (!response.ok) {
             throw new Error("Не удалось получить данные с data.json");
         }
-        const data = await response.json(); // преобразует данные из JSON в массив
-        const productCard = document.querySelector(".cards_content"); 
+        const data = await response.json(); // преобразует данные из JSON в объект
+        const productsCards = document.querySelector(".cards_content"); 
 
         //создание карточки товара
         data.forEach(({ name, description, price, image, size, color }) => {
@@ -36,10 +36,10 @@ async function fetchData() {
                 </div>
             </div>
             `;
-            productCard.insertAdjacentHTML("beforeend", cardContent); //добавление контента на страницу сайта
+            productsCards.insertAdjacentHTML("beforeend", cardContent); //добавление контента на страницу сайта
 
             //добавляет эффект наведения 
-            const cardImgBlock = productCard.querySelectorAll('.card_img-block');
+            const cardImgBlock = productsCards.querySelectorAll('.card_img-block');
             cardImgBlock.forEach((el) => {
                 el.addEventListener('mouseenter', () => {
                     const darkMode = el.querySelector('.card_img_blackout');
