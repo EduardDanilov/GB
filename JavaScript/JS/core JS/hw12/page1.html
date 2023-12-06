@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Добавление отзыва</title>
+</head>
+<body>
+  <h1>Добавление отзыва</h1>
+  <form>
+    <label for="product-name">Название продукта:</label>
+    <input type="text" id="product-name" required>
+    <br><br>
+    <label for="review-text">Текст отзыва:</label>
+    <textarea id="review-text" required></textarea>
+    <br><br>
+    <button type="button" onclick="addReview()">Добавить отзыв</button>
+  </form>
+
+  <script>
+    function addReview() {
+      const productName = document.getElementById("product-name").value;
+      const reviewText = document.getElementById("review-text").value;
+      
+      if (productName.trim() === "" || reviewText.trim() === "") {
+        alert("Пожалуйста, заполните оба поля.");
+        return;
+      }
+      
+      const review = {
+        productName: productName,
+        reviewText: reviewText
+      };
+      
+      const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+      reviews.push(review);
+      localStorage.setItem("reviews", JSON.stringify(reviews));
+      
+      alert("Отзыв добавлен.");
+      document.getElementById("product-name").value = "";
+      document.getElementById("review-text").value = "";
+    }
+  </script>
+</body>
+</html>
