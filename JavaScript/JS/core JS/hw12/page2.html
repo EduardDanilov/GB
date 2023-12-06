@@ -2,92 +2,15 @@
 <html>
 <head>
   <title>Просмотр отзывов</title>
-  
 </head>
 <body>
   <h1>Просмотр отзывов</h1>
-  <div id="products-container"></div>
 
-  <script>
-    function toggleReviews(productId) {
-      var reviewsElement = document.getElementById("reviews-" + productId);
-      var showHideButton = document.getElementById("show-hide-" + productId);
+  <div id="productList">
+    <!-- Здесь будут отображаться продукты -->
+  </div>
 
-      if (reviewsElement && showHideButton) {
-        if (reviewsElement.style.display === "none") {
-          reviewsElement.style.display = "block";
-          showHideButton.innerText = "Скрыть отзывы";
-        } else {
-          reviewsElement.style.display = "none";
-          showHideButton.innerText = "Показать отзывы";
-        }
-      }
-    }
+  <script src="./p2.js"></script>
 
-    function deleteReview(productId, index) {
-      var reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-      if (reviews[productId] && reviews[productId].length > 0) {
-        reviews[productId].splice(index, 1);
-        if (reviews[productId].length === 0) {
-          reviews.splice(productId, 1);
-        }
-        localStorage.setItem("reviews", JSON.stringify(reviews));
-        location.reload();
-      }
-    }
-
-    function loadReviews() {
-      var reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-      var productsContainer = document.getElementById("products-container");
-      if (productsContainer) {
-        productsContainer.innerHTML = "";
-
-        for (var i = 0; i < reviews.length; i++) {
-          var product = reviews[i];
-
-          var productElement = document.createElement("div");
-          var productNameElement = document.createElement("h2");
-          var reviewsElement = document.createElement("ul");
-
-          var showHideButton = document.createElement("button");
-          showHideButton.id = "show-hide-" + i;
-          showHideButton.onclick = toggleReviews.bind(null, i);
-
-          if (product.reviewsVisible) {
-            reviewsElement.style.display = "block";
-            showHideButton.innerText = "Скрыть отзывы";
-          } else {
-            reviewsElement.style.display = "none";
-            showHideButton.innerText = "Показать отзывы";
-          }
-
-          productNameElement.innerText = product.productName;
-          productElement.appendChild(productNameElement);
-          productElement.appendChild(showHideButton);
-
-          for (var j = 0; j < reviews.length; j++) {
-            var review = reviews[j];
-
-            var reviewItem = document.createElement("li");
-            var reviewText = document.createElement("p");
-            var deleteButton = document.createElement("button");
-            deleteButton.innerText = "Удалить";
-            deleteButton.onclick = deleteReview.bind(null, i, j);
-
-            reviewText.innerText = review.reviewText;
-            reviewItem.appendChild(reviewText);
-            reviewItem.appendChild(deleteButton);
-            reviewsElement.appendChild(reviewItem);
-          }
-
-          productElement.appendChild(reviewsElement);
-          productsContainer.appendChild(productElement);
-        }
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", loadReviews);
-  </script>
 </body>
 </html>
