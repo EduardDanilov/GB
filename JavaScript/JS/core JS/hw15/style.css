@@ -1,0 +1,22 @@
+.image-container {
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+    margin-top: 10px;
+}
+.photographer {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.like-button {
+    margin-top: 10px;
+}
+.like-count {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
