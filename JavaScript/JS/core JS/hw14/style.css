@@ -5,13 +5,17 @@
 }
 
 .container {
-    
     max-width: 700px;
 }
 
 .slider_container {
     max-width: 700px;
     position: relative;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
 }
 
 .slider_image {
@@ -33,13 +37,13 @@
     cursor: pointer;
 }
 
-.dot.active {
+.dot:active {
     background-color: #333;
 }
 
 .left_block, .right_block {
     position: absolute;
-    z-index: 3;
+    z-index: 5;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
