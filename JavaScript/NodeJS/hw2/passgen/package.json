@@ -1,0 +1,12 @@
+{
+  "name": "simple-pass-generator",
+  "version": "1.0.1",
+  "description": "Easy-to-use random password generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["password","random","generator"],
+  "author": "Eduard Danilov",
+  "license": "ISC"
+}
