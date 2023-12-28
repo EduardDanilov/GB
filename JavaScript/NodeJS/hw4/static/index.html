@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
+        <link type="Image/x-icon" href="favicon.ico" rel="icon">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper center">
+            <div class="header">
+                <div class="header_container">
+                    <button class="all_user_selector">Все пользователи</button>
+                    <input type="text" name="userFinder" class="user_finder" placeholder="Найти пользователя"/>
+                    <button class="new_user_adder">Создать пользователя</button>
+                </div>
+                <form class="user_create_form unvisible">
+                    <div class="new_user_form_element">
+                        <label for="userFirstName">Имя</label>
+                        <input type="text" name="userFirstName" class="form_ceil form_user_firstname" />
+                    </div>
+                    <div class="new_user_form_element">
+                        <label for="userLastName">Фамилия</label>
+                        <input type="text" name="userLastName" class="form_ceil form_user_lastname" />
+                    </div>
+                    <div class="new_user_form_element">
+                        <label for="userAge">Возраст</label>
+                        <input type="text" name="userAge" class="form_ceil form_user_age" />
+                    </div>
+                    <button class="new_user_submitter">Создать</button>
+                </form>
+            </div>
+            <div class="users_area">
+                <ul class="users_list">
+                    <li class="user">test</li>
+                </ul>
+            </div>
+        </div>
+
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>
