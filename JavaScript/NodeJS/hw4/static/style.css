@@ -42,6 +42,7 @@ li {
 
 .new_user_form_element {
     display: inline-block;
+    position: relative;
 }
 
 .form_ceil {
@@ -54,4 +55,13 @@ li {
 
 .unvisible {
     display: none;
+}
+
+.warning_message {
+    color: red;
+    position: absolute;
+}
+
+.error_null_value {
+    border: 1px solid red;
 }
