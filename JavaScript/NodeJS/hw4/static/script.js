@@ -31,7 +31,7 @@ const postNewUser = () => { //функция добавляет юзера
     user.age = formUserAge.value;
 
     if (user.firstName !== "" && user.lastName !== "" && user.age !== "") { // если все поля заполнены, данные отправляются на сервер
-        const server = "http://127.0.0.1:3000/users"; // Ссылка на сервер
+        const server = "http://127.0.0.1:3000/adduser"; // Ссылка на сервер
         const data = JSON.stringify(user, null, 4); // данные
 
         fetch(server, {
