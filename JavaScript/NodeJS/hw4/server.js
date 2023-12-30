@@ -29,29 +29,45 @@ app.use(function (req, res, next) {
     next();
 });
 
-const filePath = "./users.json";
+// Разрешает методы для работы с запросами
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    next();
+  });
 
-app.get("/", (req, res) => {
+const filePath = "./users.json"; // Путь к файлу с пользователями
+
+app.get("/", (req, res) => { // Запрос на главную страницу. Возвращает html-страницу
     res.sendFile("./index.html");
 });
 
-app.get("/users", (req, res) => {
+// Запрос списка всех пользователей
+app.get("/users", (req, res) => { 
     const usersFileData = fs.readFileSync(filePath, "utf-8");
-    res.json(JSON.parse(usersFileData));
+    if (usersFileData !== '') { // Отправляет клиенту json, если json файл не пустой
+        res.json(JSON.parse(usersFileData));
+    } else {
+        res.send('<h1>error message</h1>') // Если jsnon файл пустой, отправляет клиенту html 
+    }
 });
 
+// Добавление пользователя
 app.post("/adduser", (req, res) => {
     const userData = req.body;
     res.json(JSON.stringify(userData));
 
     const usersFileData = fs.readFileSync(filePath, "utf-8");
+
+    // Если файл не пустой, то данные добавляются
     if (usersFileData.length !== 0) {
         const allUsersData = JSON.parse(usersFileData);
         const allUsersArray = [...allUsersData];
         allUsersArray.push(userData);
         const updatedUsersData = JSON.stringify(allUsersArray, null, 2);
         fs.writeFileSync(filePath, updatedUsersData, "utf-8");
-    } else {
+    } else { // Если файл с пользователями пустой, то создается структура файла
         const allUsersArray = [];
         allUsersArray.push(userData);
         const updatedUsersData = JSON.stringify(allUsersArray, null, 2);
@@ -59,6 +75,25 @@ app.post("/adduser", (req, res) => {
     }
 });
 
+//Удаление пользователя
+app.delete("/users/:userId", (req, res) => {
+    const userId = req.params.userId; // userId приходит от клиента
+
+    const usersFileData = fs.readFileSync(filePath, "utf-8");
+
+    // чтение списка всех пользователей и их фильтрация (убран элемент с userId). Запись отфильтрованных данных
+    try {
+        const allUsersData = JSON.parse(usersFileData);
+        const updatedUsersData = allUsersData.filter(user => user.id !== userId);
+        const updatedUsersJson = JSON.stringify(updatedUsersData, null, 2);
+        fs.writeFileSync(filePath, updatedUsersJson, "utf-8");
+        res.json({ success: true, message: "Пользователь успешно удален" });
+    } catch (error) {
+        res.status(500).json({ error: "Ошибка при удалении пользователя" });
+    }
+});
+
+// В остальных случаях
 app.get("*", (req, res) => {
     res.send(
         `<h1>Некорректный адрес</h1><a href='/'>Ссылка на первую страницу</a>`
