@@ -6,6 +6,7 @@ const newUserSubmitter = document.querySelector(".new_user_submitter");
 const formUserFirstName = document.querySelector(".form_user_firstname");
 const formUserLastName = document.querySelector(".form_user_lastname");
 const formUserAge = document.querySelector(".form_user_age");
+const allUsersSelector = document.querySelector('.all_user_selector');
 
 newUserAdder.addEventListener("click", () => {
     userCreateForm.classList.toggle("unvisible");
@@ -16,7 +17,14 @@ newUserSubmitter.addEventListener("click", (event) => {
     postNewUser();
 });
 
+allUsersSelector.addEventListener('click', () => {
+    viewAllUsers()
+})
+
 const postNewUser = () => { //функция добавляет юзера
+
+    const server = "http://127.0.0.1:3000/adduser"; // Ссылка на сервер
+
     const user = {
         id: "",
         firstName: "",
@@ -31,7 +39,7 @@ const postNewUser = () => { //функция добавляет юзера
     user.age = formUserAge.value;
 
     if (user.firstName !== "" && user.lastName !== "" && user.age !== "") { // если все поля заполнены, данные отправляются на сервер
-        const server = "http://127.0.0.1:3000/adduser"; // Ссылка на сервер
+        
         const data = JSON.stringify(user, null, 4); // данные
 
         fetch(server, {
@@ -83,3 +91,65 @@ const postNewUser = () => { //функция добавляет юзера
         });
     }
 };
+
+async function viewAllUsers() {
+    const server = "http://127.0.0.1:3000/users"; // Ссылка на сервер
+    try {
+        const response = await fetch(server);
+        if (!response.ok) {
+            throw new Error('Something bad happened. Error: ' + response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+        const usersList = document.querySelector('.users_list');
+        usersList.innerHTML = `<ul class="users_list"></ul>`
+        data.forEach(({ id, firstName, lastName, age }) => {
+            const user = `
+                <li class='user_element'>
+                    <p class='user_element_firstname'>${firstName}</p>
+                    <p class='user_element_firstname'>${lastName}</p>
+                    <p class='user_element_firstname'>${age}</p>
+                </li>
+            `
+            usersList.insertAdjacentHTML("beforeend", user); //добавление контента на страницу сайта
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+/*
+function fetchData() {
+    try {
+        const response = await fetch("data.json"); // получает данные с API
+        if (!response.ok) {
+            throw new Error("Не удалось получить данные с data.json");
+        }
+        const data = await response.json(); // преобразует данные из JSON в объект
+        const productsCards = document.querySelector(".cards_content"); 
+
+        //создание карточки товара
+        data.forEach(({ name, description, price, image, size, color }) => {
+
+            const cardContent = `
+            <div class="product__cards__card">
+                <div class="card_img-block">
+                    <img src="${image}" alt="product photo" class="card_img">
+                    <div class="card_img_blackout">
+                        <div class="add_to_cart_button">
+                            <p class="add_to_cart_button-content">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_text-block">
+                    <h4 class="card_title">${name}</h4>
+                    <p class="card_description">${description}</p>
+                    <p class="card_price">$<span class="price_value">${price}</span></p>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-size">${size}</div>
+                    <div class="info-block-color">${color}</div>
+                </div>
+            </div>
+            `;
+            productsCards.insertAdjacentHTML("beforeend", cardContent); //добавление контента на страницу сайта
+*/

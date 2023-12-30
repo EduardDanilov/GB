@@ -65,3 +65,7 @@ li {
 .error_null_value {
     border: 1px solid red;
 }
+
+.user_element {
+    margin-bottom: 20px;
+}

@@ -35,18 +35,9 @@ app.get("/", (req, res) => {
     res.sendFile("./index.html");
 });
 
-app.post("/users", (req, res) => {
-    const userData = req.body;
-    console.log(userData);
-    res.json(JSON.stringify(userData));
-
-    // let counter = null;
-    // const jsonData = fs.readFileSync(filePath, 'utf-8');
-    // const data = JSON.parse(jsonData);
-    // counter = data.aboutpage;
-    // data.aboutpage += 1;
-    // const updatedData = JSON.stringify(data, null, 2);
-    // fs.writeFileSync(filePath, updatedData, 'utf-8');
+app.get("/users", (req, res) => {
+    const usersFileData = fs.readFileSync(filePath, "utf-8");
+    res.json(JSON.parse(usersFileData));
 });
 
 app.post("/adduser", (req, res) => {
