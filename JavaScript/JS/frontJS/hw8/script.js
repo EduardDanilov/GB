@@ -94,7 +94,6 @@ async function fetchData() {
                 const cartBox = document.querySelector('.cart__box');
                 cartBox.insertAdjacentHTML('beforeend', cartItem);
 
-
                 //Удаление элементов из корзины
                 const removeButtons = document.querySelectorAll('.close__btn');
                 removeButtons.forEach((el) => {
